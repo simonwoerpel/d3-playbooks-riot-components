@@ -1,0 +1,42 @@
+.d3-playbooks__infobox {
+
+  // background: rgba(255, 255, 255, .8);
+  // border: 1px solid gray;
+  // z-index: 1000;
+  // padding: 10px;
+  // overflow: hidden;
+  // pointer-events: none;
+  // -webkit-box-sizing: border-box;
+  // -moz-box-sizing: border-box;
+  // -o-box-sizing: border-box;
+  // box-sizing: border-box;
+
+  dl {
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-label {
+    float: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  &-value {
+    float: none;
+    padding: 0;
+    margin: 0 0 .4em 0;
+  }
+
+  &-table {
+    width: 250px;
+
+    dt, dd {
+      float: left;
+      width: 50%;
+    }
+  }
+
+}

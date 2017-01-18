@@ -1,0 +1,33 @@
+@import './infobox.scss';
+// @import './searchbox.less';
+@import './legend.scss';
+
+
+.d3-playbooks {
+  .dot, .bar {
+    fill-opacity: .7;
+
+    &:hover {
+      fill-opacity: 1;
+    }
+
+    &.-hilight {
+      fill-opacity: 1;
+      stroke: black;
+      stroke-width: 2px;
+    }
+  }
+
+  // for line hovering
+  .focus {
+    circle {
+      fill: steelblue;
+      r: 4;
+    }
+  }
+
+  // helpers
+  .-empty {
+    display: none;
+  }
+}
