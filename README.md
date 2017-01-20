@@ -13,7 +13,7 @@ d3.playbooks.choroplethMap(<opts>).render()
 
 ## map example
 
-[See this map in action](https://correctiv.org/en/investigations/superbugs/atlas/superbug-atlas-e-coli-fluoroquinol/)
+[See this map in action](https://simonwoerpel.github.io/d3pb-superbugs-example/)
 
 there is no need to specify the `element`-selectors, but this is useful to structurize your visualization (otherwise the components will be just appended to the root element of the chart).
 
