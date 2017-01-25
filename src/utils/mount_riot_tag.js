@@ -15,15 +15,19 @@ export default ({
     throw new Error('need `chart.elementId` or `element` for riot components be able to be mounted')
   }
 
+  const className = cssNamespace + '__' + (cssClass || tagName)
+
   if (!riotSelector) {
     riotSelector = elementId + '-' + tagName
-    const css = cssNamespace + '__' + cssClass ? cssClass : tagName
     element
       .append('div')
       .attr('id', riotSelector)
-      .attr('class', cssNamespace + '__' + css)
+      .attr('class', className)
     riotSelector = '#' + riotSelector
   }
+
+  // add custom css class
+  opts.className = className
 
   return riot.mount(riotSelector, tagName, opts)[0]
 }

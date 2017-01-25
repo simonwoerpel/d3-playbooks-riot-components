@@ -2,7 +2,7 @@ import render from 'string-template'
 
 import './raw_html.tag'
 
-<riot-infobox class="d3-playbooks__infobox { -empty: empty }">
+<riot-infobox class="{ opts.className } d3-playbooks__infobox { -empty: empty }">
   <raw-html content={ rawContent } />
 
   this.empty = true

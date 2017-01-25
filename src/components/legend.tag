@@ -2,7 +2,7 @@ import render from 'string-template'
 
 import './raw_html.tag'
 
-<riot-legend class="d3-playbooks__legend">
+<riot-legend class="{ opts.className } d3-playbooks__legend">
 
   <raw-html content={ rawContent } />
 

@@ -1,4 +1,4 @@
-<riot-selector class="d3-playbooks__selector">
+<riot-selector class="{ opts.className } d3-playbooks__selector">
 
   <select onchange={ hilight }>
     <option each={ label, i in labels } value={ i } selected={ active === i }>{ label }</option>
