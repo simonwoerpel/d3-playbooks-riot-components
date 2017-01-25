@@ -1,1 +1,3 @@
-export default ({hilightedSel}) => hilightedSel.classed('-hilight', true)
+import hilightNode from './hilight_node.js'
+
+export default ({hilightedSel}) => hilightNode(hilightedSel.node())
