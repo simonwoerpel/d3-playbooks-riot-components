@@ -25,6 +25,6 @@ export default {
     _hilight: 'hilightSelection'
   },
   unhilight: {
-    _: 'unhilightSelection'
+    hilightedSel: 'unhilightSelection'
   }
 }
