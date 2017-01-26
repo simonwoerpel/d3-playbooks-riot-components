@@ -54,7 +54,8 @@ module.exports = options => {
       }]
     },
     externals: {
-      d3: 'd3'
+      d3: 'd3',
+      riot: 'riot'
     }
   }
 
