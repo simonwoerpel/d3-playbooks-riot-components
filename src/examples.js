@@ -10,7 +10,8 @@ export default () => {
   }).render().legend({
     wrapperTemplate: '<h3>Legend</h3><p>{body}</p>',
     itemTemplate: 'The color for <strong>{label}</strong> is <em>{color}</em>.'
-  }).infobox({
+  })
+  .infobox({
     element: '#my-infobox',
     template: '<p><strong>Value for {x}:</strong> {y}</p>'
   }).selector({
@@ -39,6 +40,6 @@ export default () => {
     elementId: 'chart3',
     dataUrl: 'data/multiline.csv',
     yCols: ['y1', 'y2', 'y3']
-  }).render().infobox()
+  }).render().legend()
 
 }

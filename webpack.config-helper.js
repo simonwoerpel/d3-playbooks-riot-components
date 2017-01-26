@@ -53,7 +53,6 @@ module.exports = options => {
         }
       }]
     },
-    // FIXME
     externals: {
       d3: 'd3'
     }

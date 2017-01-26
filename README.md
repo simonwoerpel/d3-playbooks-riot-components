@@ -2,6 +2,10 @@
 
 Add `legend`, `infobox` and `selector` to [`d3-playbooks`](https://github.com/simonwoerpel/d3-playbooks) and [`d3-playbooks-maps`](https://github.com/simonwoerpel/d3-playbooks-maps) as public methods.
 
+## External dependencies
+
+- recent version (v 3.0.7) of [riotjs](http://riotjs.com)
+
 ## Quickstart
 
 ```javascript
