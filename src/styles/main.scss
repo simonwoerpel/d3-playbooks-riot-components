@@ -4,19 +4,6 @@
 
 
 .d3-playbooks {
-  .dot, .bar {
-    fill-opacity: .7;
-
-    &:hover {
-      fill-opacity: 1;
-    }
-
-    &.-hilight {
-      fill-opacity: 1;
-      stroke: black;
-      stroke-width: 2px;
-    }
-  }
 
   // for line hovering
   .focus {
