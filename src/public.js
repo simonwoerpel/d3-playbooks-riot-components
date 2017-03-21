@@ -1,24 +1,43 @@
-import plays from './playbooks/plays.js'
-import defaults from './playbooks/defaults.js'
-import template from './playbooks/template.js'
+// FIXME
+// refactor to better library handling in general.
+
+
+import _plays from './playbooks/plays.js'
+import _defaults from './playbooks/defaults.js'
+import _template from './playbooks/template.js'
 
 // Object.assign polyfill already present in base library
 
 // update plays & defaults
-Object.assign(plays, d3.playbooks.CHARTS.baseChart.plays)
-Object.assign(defaults, d3.playbooks.CHARTS.baseChart.defaults)
-d3.playbooks.CHARTS.baseChart = {plays, defaults}
+const getUpdatedPlaybook = base => {
+  const plays = Object.assign(_plays, base.plays)
+  const defaults = Object.assign(_defaults, base.defaults)
+  return {plays, defaults}
+}
 
 // update playbook template
+const updateTemplate = template => {
+  // existing methods
+  Object.assign(template.init, _template.init)
+  Object.assign(template.draw, _template.draw)
 
-// existing methods
-Object.assign(d3.playbooks.TEMPLATE.init, template.init)
-Object.assign(d3.playbooks.TEMPLATE.draw, template.draw)
+  // new ones
+  Object.keys(_template).filter(k => ['init', 'draw'].indexOf(k) === -1).map(k => {
+    template[k] = _template[k]
+  })
+}
 
-// new ones
-Object.keys(template).filter(k => ['init', 'draw'].indexOf(k) === -1).map(k => {
-  d3.playbooks.TEMPLATE[k] = template[k]
-})
+
+if (d3.playbooks.CHARTS) {
+  d3.playbooks.CHARTS.baseChart = getUpdatedPlaybook(d3.playbooks.CHARTS.baseChart)
+  updateTemplate(d3.playbooks.TEMPLATE)
+}
+
+if (d3.playbooks.maps) {
+  d3.playbooks.maps.MAPS.baseMap = getUpdatedPlaybook(d3.playbooks.maps.MAPS.baseMap)
+  updateTemplate(d3.playbooks.maps.TEMPLATE)
+}
+
 
 // add public methods
 const publics = ['legend', 'infobox', 'selector', 'hilight', 'unhilight']
