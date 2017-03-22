@@ -10,8 +10,8 @@ import _template from './playbooks/template.js'
 
 // update plays & defaults
 const getUpdatedPlaybook = base => {
-  const plays = Object.assign(_plays, base.plays)
-  const defaults = Object.assign(_defaults, base.defaults)
+  const plays = Object.assign({}, _plays, base.plays)
+  const defaults = Object.assign({}, _defaults, base.defaults)
   return {plays, defaults}
 }
 
