@@ -13,6 +13,7 @@
     const data = this.data[label]
     this.opts.hilight(data)
     this.opts.control.trigger(riot.EVT.updateInfobox, data)
+    this.opts.control.trigger(riot.EVT.selectorSelect, data)
   }
 
   this.opts.control.on(riot.EVT.updateSelector, data => {

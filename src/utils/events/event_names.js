@@ -5,4 +5,5 @@ riot.EVT = {
   updateInfobox: 'update_infobox',
   emptyInfobox: 'empty_infobox',
   updateSelector: 'update_selector',
+  selectorSelect: 'selector_select'
 }
