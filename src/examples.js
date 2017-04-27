@@ -7,6 +7,7 @@ export default () => {
       ['a', 'c', 'b'],
       ['1', 3, '2']
     ],
+    mouseout: false
   }).render().legend({
     wrapperTemplate: '<h3>Legend</h3><p>{body}</p>',
     itemTemplate: 'The color for <strong>{label}</strong> is <em>{color}</em>.'

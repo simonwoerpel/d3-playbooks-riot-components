@@ -4,5 +4,6 @@ import unhilightNode from '../utils/hilight/unhilight_node.js'
 export default {
   control: null,
   hilightNode,
-  unhilightNode
+  unhilightNode,
+  mouseout: true
 }

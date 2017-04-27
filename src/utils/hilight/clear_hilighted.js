@@ -1,1 +1,3 @@
-export default ({drawedSelection}) => drawedSelection.selectAll('-hilighted').classed('-hilighted', false)
+export default ({drawedSelection}) => {
+  drawedSelection.classed('-hilight', false)
+}

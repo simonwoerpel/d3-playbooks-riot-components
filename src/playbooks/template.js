@@ -20,7 +20,8 @@ export default {
     selectorEl: 'mountSelector'
   },
   hilight: {
-    _unhilight: 'unhilightSelection',
+    // _unhilight: 'unhilightSelection',
+    _clear: 'clearHilight',
     hilightedSel: 'findSelectionForHilight',
     _hilight: 'hilightSelection'
   },

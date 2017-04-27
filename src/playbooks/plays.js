@@ -6,6 +6,7 @@ import getSelectorData from '../utils/selector/get_selector_data.js'
 import findSelectionForHilight from '../utils/hilight/find_selection.js'
 import hilightSelection from '../utils/hilight/hilight_selection.js'
 import unhilightSelection from '../utils/hilight/unhilight_selection.js'
+import clearHilight from '../utils/hilight/clear_hilighted.js'
 import addMouseEvents from '../utils/events/add_mouse_events.js'
 import initRiotEvents from '../utils/events/init_riot_events.js'
 
@@ -57,5 +58,6 @@ export default {
   // hilighting
   findSelectionForHilight,
   hilightSelection,
-  unhilightSelection
+  unhilightSelection,
+  clearHilight
 }
